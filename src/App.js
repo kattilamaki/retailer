@@ -1,20 +1,23 @@
-import React from 'react'
-import Header from 'components/Header/Header'
-import Customer from 'components/Search/Customer'
-import DeliveryTime from 'components/Search/DeliveryTime'
-import SalesAmount from 'components/Search/SalesAmount'
-import Results from 'components/Results/Results'
+import React from "react";
+import Header from "components/Header/Header";
+import SearchBar from "components/Search/SearchBar";
+import Results from "components/Results/Results";
+import "App.css";
+import styled from "styled-components";
+
+const Page = styled.div`
+  background-color: lightgray;
+  height: 100vh;
+`;
 
 const App = () => {
   return (
-    <>
-    <Header />
-    <Customer />
-    <DeliveryTime />
-    <SalesAmount />
-    <Results />
-    </>
-  )
-}
+    <Page>
+      <Header />
+      <SearchBar />
+      <Results />
+    </Page>
+  );
+};
 
-export default App
+export default App;

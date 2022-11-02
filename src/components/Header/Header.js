@@ -5,9 +5,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 22pt;
-  justify-content: center;
+  justify-content: flex-start;
   height: 40px;
-  padding: 5px 0 5px 0;
+  padding: 10px 0 0 0;
+  margin: 0 0 10px 20px;
 `;
 
 const Header = () => {

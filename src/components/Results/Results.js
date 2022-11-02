@@ -1,14 +1,25 @@
 import React from "react";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 20px 0 20px;
+  border-radius: 7px;
+  background-color: white;
+  padding: 20px 0 20px 0;
+`;
 
 const Results = () => {
   return (
-    <div>
+    <Container>
       <table>
         <tr>
           <th>Product</th>
           <th>Discount %</th>
-          <th>Initial price</th>
-          <th>Sales price</th>
+          <th>Initial price €</th>
+          <th>Sales price €</th>
         </tr>
         <tr>
           <td>Tennis racket</td>
@@ -29,7 +40,7 @@ const Results = () => {
           <td>950</td>
         </tr>
       </table>
-    </div>
+    </Container>
   );
 };
 

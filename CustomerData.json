@@ -1,0 +1,51 @@
+{
+    "customers": [
+      {
+        "name": "Tennis Rosy",
+        "discount percent": 20
+      },
+      {
+        "name": "Bowdoin Industry",
+        "discount percent": 25
+      },
+      {
+        "name": "Earthy Foxed",
+        "discount percent": 10
+      },
+      {
+        "name": "Ruffian Mainline",
+        "discount percent": 5
+      }
+    ],
+    "products": [
+      {
+        "name": "Tennis Ball",
+        "price": 5
+      },
+      {
+        "name": "Tennis Racket",
+        "price": 100
+      },
+      {
+        "name": "Tennis Shoes",
+        "price": 50.5
+      },
+      {
+        "name": "Tennis Bag",
+        "price": 25
+      },
+      {
+        "name": "Golf Bag",
+        "price": 42.99
+      },
+      {
+        "name": "Golf Shoes",
+        "price": 25
+      },
+      {
+        "name": "Diamond Bag",
+        "price": 1250
+      }
+    ]
+  }
+  

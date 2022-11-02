@@ -15,6 +15,7 @@ const App = () => {
   const appData = useJsonData();
   const [amount, setAmount] = useState(0);
   const [customer, setCustomer] = useState(0);
+  const [deliveryTime, setClosingTime] = useState("");
 
   const handleAmountChange = (event) => {
     setAmount(event.target.value);
@@ -22,6 +23,10 @@ const App = () => {
 
   const handleCustomerChange = (event) => {
     setCustomer(event.target.value);
+  };
+
+  const handleDeliveryTimeChange = (event) => {
+    setClosingTime(event.target.value);
   };
 
   return (
@@ -33,6 +38,7 @@ const App = () => {
             customers={appData.customers}
             changeAmount={handleAmountChange}
             changeCustomer={handleCustomerChange}
+            changeDeliveryTime={handleDeliveryTimeChange}
           />
           <Results products={appData.products} />
         </Page>

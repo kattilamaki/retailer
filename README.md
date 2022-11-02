@@ -19,3 +19,6 @@ json server to provide dummy data for application. Local installation of json se
 3. Run json server: ```json-server -p 3001 --watch CustomerData.json``
 3. Run the server with `npm start`
 4. Open the application in your browser at `http://localhost:3000`
+
+## Requirements
+* Chrome 25 ->

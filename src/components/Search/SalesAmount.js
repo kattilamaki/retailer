@@ -1,11 +1,15 @@
 import React from "react";
-import styled from "styled-components";
 
-const SalesAmount = () => {
+const SalesAmount = ({ changeAmount }) => {
   return (
     <div>
       <label for="sales">Sales amount: </label>
-      <input type="number" id="sales" name="sales"></input>
+      <input
+        type="number"
+        id="sales"
+        name="sales"
+        onChange={changeAmount}
+      ></input>
       €
     </div>
   );

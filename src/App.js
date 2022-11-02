@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "components/Header/Header";
+import SearchBar from "components/Search/SearchBar";
+import Results from "components/Results/Results";
+import "App.css";
+import styled from "styled-components";
+import useJsonData from "adapters/useJsonData";
 
-function App() {
+const Page = styled.div`
+  background-color: lightgray;
+  height: 100vh;
+`;
+
+const App = () => {
+  const appData = useJsonData();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {appData.ready && (
+        <Page>
+          <Header />
+          <SearchBar customers={appData.customers} />
+          <Results products={appData.products} />
+        </Page>
+      )}
+    </>
   );
-}
+};
 
 export default App;

@@ -3,22 +3,22 @@
     {
       "id": 1,
       "name": "Tennis Rosy",
-      "discount percent": 20
+      "discount": 20
     },
     {
       "id": 2,
       "name": "Bowdoin Industry",
-      "discount percent": 25
+      "discount": 25
     },
     {
       "id": 3,
       "name": "Earthy Foxed",
-      "discount percent": 10
+      "discount": 10
     },
     {
       "id": 4,
       "name": "Ruffian Mainline",
-      "discount percent": 5
+      "discount": 5
     }
   ],
   "products": [

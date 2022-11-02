@@ -15,10 +15,10 @@ const Container = styled.div`
   border-radius: 7px;
 `;
 
-const SearchBar = () => {
+const SearchBar = ({ customers }) => {
   return (
     <Container>
-      <Customer />
+      <Customer customers={customers} />
       <DeliveryTime />
       <SalesAmount />
     </Container>

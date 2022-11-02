@@ -5,16 +5,18 @@ const Label = styled.label`
   margin-right: 10px;
 `;
 
-const CustomerSelect = () => {
+const CustomerSelect = ({ customers }) => {
+  let selections = customers.map((customer) => {
+    return <option value={customer.name}>{customer.name}</option>;
+  });
+
   return (
     <div>
       <Label>
-        <label for="cars">Customer:</label>
+        <label for="customer">Customer:</label>
       </Label>
       <select name="customers" id="customers">
-        <option value="Customer 1">Volvo</option>
-        <option value="Customer 2">Saab</option>
-        <option value="Customer 3">Mercedes</option>
+        {selections}
       </select>
     </div>
   );

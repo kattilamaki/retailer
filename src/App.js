@@ -4,6 +4,7 @@ import SearchBar from "components/Search/SearchBar";
 import Results from "components/Results/Results";
 import "App.css";
 import styled from "styled-components";
+import useJsonData from "adapters/useJsonData";
 
 const Page = styled.div`
   background-color: lightgray;
@@ -11,12 +12,18 @@ const Page = styled.div`
 `;
 
 const App = () => {
+  const appData = useJsonData();
+
   return (
-    <Page>
-      <Header />
-      <SearchBar />
-      <Results />
-    </Page>
+    <>
+      {appData.ready && (
+        <Page>
+          <Header />
+          <SearchBar customers={appData.customers} />
+          <Results products={appData.products} />
+        </Page>
+      )}
+    </>
   );
 };
 

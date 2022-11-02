@@ -11,7 +11,18 @@ const Container = styled.div`
   padding: 20px 0 20px 0;
 `;
 
-const Results = () => {
+const Results = ({ products }) => {
+  let productListItems = products.map((product) => {
+    return (
+      <tr>
+        <td>{product.name}</td>
+        <td>20</td>
+        <td>{product.price}</td>
+        <td>80</td>
+      </tr>
+    );
+  });
+
   return (
     <Container>
       <table>
@@ -21,24 +32,7 @@ const Results = () => {
           <th>Initial price €</th>
           <th>Sales price €</th>
         </tr>
-        <tr>
-          <td>Tennis racket</td>
-          <td>20</td>
-          <td>100</td>
-          <td>80</td>
-        </tr>
-        <tr>
-          <td>Bowling shoes</td>
-          <td>90</td>
-          <td>10</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>Bag of diamonds</td>
-          <td>5</td>
-          <td>1000</td>
-          <td>950</td>
-        </tr>
+        {productListItems}
       </table>
     </Container>
   );

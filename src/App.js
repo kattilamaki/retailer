@@ -20,7 +20,7 @@ const App = () => {
   const [deliveryTime, setClosingTime] = useState(1)
 
   const handleAmountChange = event => {
-    setAmount(event.target.value)
+    setAmount(parseInt(event.target.value))
   }
 
   const handleCustomerChange = event => {

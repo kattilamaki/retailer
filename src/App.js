@@ -17,7 +17,7 @@ const App = () => {
   const appData = useJsonData()
   const [amount, setAmount] = useState(0)
   const [customerId, setCustomerId] = useState(1)
-  const [deliveryTime, setClosingTime] = useState('')
+  const [deliveryTime, setClosingTime] = useState(1)
 
   const handleAmountChange = event => {
     setAmount(event.target.value)
@@ -28,7 +28,7 @@ const App = () => {
   }
 
   const handleDeliveryTimeChange = event => {
-    setClosingTime(event.target.value)
+    setClosingTime(event.target.value.slice(-2))
   }
 
   useEffect(() => {}, [appData.ready])

@@ -15,7 +15,7 @@ json server to provide dummy data for application. Local installation of json se
 ## Installation
 1. Clone the repository
 2. Install dependencies with `npm install`
-3. Run json server: ```json-server -p 3001 --watch AppData.json``
+3. Run json server: `json-server -p 3001 --watch AppData.json`
 3. Run the server with `npm start`
 4. Open the application in your browser at `http://localhost:3000`
 

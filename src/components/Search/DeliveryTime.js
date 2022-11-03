@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useContext } from 'react'
+import styled from 'styled-components'
+import { AppContext } from 'App'
 
-const DeliveryTime = ({ changeDeliveryTime }) => {
+const Label = styled.label`
+  margin-right: 10px;
+  font-weight: bold;
+`
+
+const StyledInput = styled.input`
+  padding: 5px;
+`
+
+const DeliveryTime = () => {
+  const context = useContext(AppContext)
   return (
     <div>
-      <label for="delivery">Delivery time: </label>
-      <input
+      <Label>Delivery time: </Label>
+      <StyledInput
         type="month"
-        id="bdaymonth"
-        name="bdaymonth"
-        onChange={changeDeliveryTime}
-      ></input>
+        onChange={context.changeDeliveryTime}
+      ></StyledInput>
     </div>
-  );
-};
+  )
+}
 
-export default DeliveryTime;
+export default DeliveryTime

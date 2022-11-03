@@ -73,13 +73,15 @@ const Products = () => {
   return (
     <Container>
       <table>
-        <tr>
-          <th>Product</th>
-          <th>Discount</th>
-          <th>Initial price €</th>
-          <th>Sales price €</th>
-        </tr>
-        {productListItems}
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Discount</th>
+            <th>Initial price €</th>
+            <th>Sales price €</th>
+          </tr>
+        </thead>
+        <tbody>{productListItems}</tbody>
       </table>
     </Container>
   )

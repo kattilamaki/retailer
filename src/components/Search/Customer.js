@@ -1,25 +1,36 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useContext } from 'react'
+import styled from 'styled-components'
+import { AppContext } from 'App'
 
 const Label = styled.label`
   margin-right: 10px;
-`;
+  font-weight: bold;
+`
 
-const CustomerSelect = ({ customers, changeCustomer }) => {
-  let selections = customers.map((customer) => {
-    return <option value={customer.id}>{customer.name}</option>;
-  });
+const Selection = styled.select`
+  padding: 5px;
+`
+
+const Customer = () => {
+  const context = useContext(AppContext)
+  let selections = context.appData.customers.map(customer => {
+    return <option value={customer.id} key={customer.id}>{customer.name}</option>
+  })
 
   return (
     <div>
       <Label>
-        <label for="customer">Customer:</label>
+        <label>Customer:</label>
       </Label>
-      <select name="customers" id="customers" onChange={changeCustomer}>
+      <Selection
+        name="customers"
+        id="customers"
+        onChange={context.changeCustomer}
+      >
         {selections}
-      </select>
+      </Selection>
     </div>
-  );
-};
+  )
+}
 
-export default CustomerSelect;
+export default Customer

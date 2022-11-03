@@ -26,9 +26,13 @@ const Results = () => {
     return (
       <tr>
         <td>{product.name}</td>
-        <td>{discount}%</td>
+        <td>{discount <= 0 ? 0 : discount}%</td>
         <td>{product.price}</td>
-        <td>{((discount / 100) * product.price).toFixed(2)}</td>
+        <td>
+          {discount <= 0
+            ? product.price
+            : (product.price - (discount / 100) * product.price).toFixed(2)}
+        </td>
       </tr>
     )
   })

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { AppContext } from 'App'
-import { giveBaseDiscount } from 'logic/Discount'
+import { giveBaseDiscount, giveSeasonalDiscount } from 'logic/Discount'
 
 const Container = styled.div`
   display: flex;
@@ -18,7 +18,9 @@ const Results = () => {
 
   useEffect(() => {}, [context])
 
-  let discount = giveBaseDiscount(context.appData, context.customerId)
+  let discount =
+    giveBaseDiscount(context.appData, context.customerId) +
+    giveSeasonalDiscount(context.deliveryTime)
 
   let productListItems = context.appData.products.map(product => {
     return (

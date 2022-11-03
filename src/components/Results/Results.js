@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import styled from 'styled-components'
+import { AppContext } from 'App'
+import { giveDiscount } from 'logic/Discount'
 
 const Container = styled.div`
   display: flex;
@@ -11,14 +13,20 @@ const Container = styled.div`
   padding: 20px 0 20px 0;
 `
 
-const Results = ({ products }) => {
-  let productListItems = products.map(product => {
+const Results = () => {
+  const context = useContext(AppContext)
+
+  useEffect(() => {}, [context])
+
+  let discount = giveDiscount(context.appData, context.customerId)
+
+  let productListItems = context.appData.products.map(product => {
     return (
       <tr>
         <td>{product.name}</td>
-        <td>20%</td>
+        <td>{discount}%</td>
         <td>{product.price}</td>
-        <td>80</td>
+        <td>{(discount / 100 * product.price).toFixed(2)}</td>
       </tr>
     )
   })

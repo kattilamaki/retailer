@@ -10,8 +10,7 @@ json server to provide dummy data for application. Local installation of json se
 ```npm install json-server```
 
 ## Resources
-* http://localhost:3001/customers
-* http://localhost:3001/products
+* http://localhost:3001/data
 
 ## Installation
 1. Clone the repository

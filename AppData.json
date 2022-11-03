@@ -1,54 +1,56 @@
 {
-  "customers": [
-    {
-      "id": 1,
-      "name": "Tennis Rosy",
-      "discount": 20
-    },
-    {
-      "id": 2,
-      "name": "Bowdoin Industry",
-      "discount": 25
-    },
-    {
-      "id": 3,
-      "name": "Earthy Foxed",
-      "discount": 10
-    },
-    {
-      "id": 4,
-      "name": "Ruffian Mainline",
-      "discount": 5
-    }
-  ],
-  "products": [
-    {
-      "name": "Tennis Ball",
-      "price": 5
-    },
-    {
-      "name": "Tennis Racket",
-      "price": 100
-    },
-    {
-      "name": "Tennis Shoes",
-      "price": 50.5
-    },
-    {
-      "name": "Tennis Bag",
-      "price": 25
-    },
-    {
-      "name": "Golf Bag",
-      "price": 42.99
-    },
-    {
-      "name": "Golf Shoes",
-      "price": 25
-    },
-    {
-      "name": "Diamond Bag",
-      "price": 1250
-    }
-  ]
+  "data": {
+    "customers": [
+      {
+        "id": 1,
+        "name": "Tennis Rosy",
+        "discount": 20
+      },
+      {
+        "id": 2,
+        "name": "Bowdoin Industry",
+        "discount": 25
+      },
+      {
+        "id": 3,
+        "name": "Earthy Foxed",
+        "discount": 10
+      },
+      {
+        "id": 4,
+        "name": "Ruffian Mainline",
+        "discount": 5
+      }
+    ],
+    "products": [
+      {
+        "name": "Tennis Ball",
+        "price": 5
+      },
+      {
+        "name": "Tennis Racket",
+        "price": 100
+      },
+      {
+        "name": "Tennis Shoes",
+        "price": 50.5
+      },
+      {
+        "name": "Tennis Bag",
+        "price": 25
+      },
+      {
+        "name": "Golf Bag",
+        "price": 42.99
+      },
+      {
+        "name": "Golf Shoes",
+        "price": 25
+      },
+      {
+        "name": "Diamond Bag",
+        "price": 1250
+      }
+    ]
+  }
 }

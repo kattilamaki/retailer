@@ -16,7 +16,6 @@ const CustomerSelect = ({ customers, changeCustomer }) => {
         <label for="customer">Customer:</label>
       </Label>
       <select name="customers" id="customers" onChange={changeCustomer}>
-      <option value={0}>Select customer</option>
         {selections}
       </select>
     </div>

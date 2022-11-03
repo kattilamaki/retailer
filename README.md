@@ -21,3 +21,11 @@ json server to provide dummy data for application. Local installation of json se
 
 ## Requirements
 * Chrome 25 ->
+
+## Limitations and future imporvements
+* Styling improvements (maybe framework)
+* Product listing refactoring
+* Actual backend instead of json server
+* Running in container + bundling
+* Refined functionality
+* Firefox support (datepicker)

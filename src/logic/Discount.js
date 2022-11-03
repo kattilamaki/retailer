@@ -38,3 +38,18 @@ export const getSalesDiscount = salesAmount => {
   }
   return 0
 }
+
+export const getDiscount = (appData, customerId, deliveryTime, amount) => {
+  return (
+    getBaseDiscount(appData, customerId) +
+    getSeasonalDiscount(deliveryTime) +
+    getSalesDiscount(amount)
+  )
+}
+
+export const hasSpecialDiscount = (appData, customerId, product) => {
+  const customer = appData.customers.find(
+    customer => customer.id === customerId
+  )
+  return customer.specialDiscount === product.id
+}

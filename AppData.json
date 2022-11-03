@@ -4,50 +4,61 @@
       {
         "id": 1,
         "name": "Tennis Rosy",
-        "discount": 20
+        "discount": 20,
+        "specialDiscount": 4
       },
       {
         "id": 2,
         "name": "Bowdoin Industry",
-        "discount": 25
+        "discount": 25,
+        "specialDiscount": 5
       },
       {
         "id": 3,
         "name": "Earthy Foxed",
-        "discount": 10
+        "discount": 10,
+        "specialDiscount": 2
       },
       {
         "id": 4,
         "name": "Ruffian Mainline",
-        "discount": 4
+        "discount": 4,
+        "specialDiscount": 1
       }
     ],
     "products": [
       {
+        "id": 1,
         "name": "Tennis Ball",
         "price": 5
       },
       {
+        "id": 2,
         "name": "Tennis Racket",
         "price": 100
       },
       {
+        "id": 3,
         "name": "Tennis Shoes",
         "price": 50.5
       },
       {
+        "id": 4,
         "name": "Tennis Bag",
         "price": 25
       },
       {
+        "id": 5,
         "name": "Golf Bag",
         "price": 42.99
       },
       {
+        "id": 6,
         "name": "Golf Shoes",
         "price": 25
       },
       {
+        "id": 7,
         "name": "Diamond Bag",
         "price": 1250
       }

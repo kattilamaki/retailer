@@ -1,7 +1,7 @@
 import React, { useState, createContext, useEffect } from 'react'
 import Header from 'components/Header/Header'
 import SearchBar from 'components/Search/SearchBar'
-import Results from 'components/Results/Results'
+import Results from 'components/Products/Products'
 import 'App.css'
 import styled from 'styled-components'
 import useJsonData from 'adapters/useAppData'

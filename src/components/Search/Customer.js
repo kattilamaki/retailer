@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { AppContext } from 'App'
 
 const Label = styled.label`
   margin-right: 10px;
@@ -10,21 +11,26 @@ const Selection = styled.select`
   padding: 5px;
 `
 
-const CustomerSelect = ({ customers, changeCustomer }) => {
-  let selections = customers.map(customer => {
-    return <option value={customer.id}>{customer.name}</option>
+const Customer = () => {
+  const context = useContext(AppContext)
+  let selections = context.appData.customers.map(customer => {
+    return <option value={customer.id} key={customer.id}>{customer.name}</option>
   })
 
   return (
     <div>
       <Label>
-        <label for="customer">Customer:</label>
+        <label>Customer:</label>
       </Label>
-      <Selection name="customers" id="customers" onChange={changeCustomer}>
+      <Selection
+        name="customers"
+        id="customers"
+        onChange={context.changeCustomer}
+      >
         {selections}
       </Selection>
     </div>
   )
 }
 
-export default CustomerSelect
+export default Customer

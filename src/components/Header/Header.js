@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 const Container = styled.div`
   display: flex;
@@ -9,10 +9,10 @@ const Container = styled.div`
   height: 40px;
   padding: 10px 0 0 0;
   margin: 0 0 10px 20px;
-`;
+`
 
 const Header = () => {
-  return <Container>Retailer</Container>;
-};
+  return <Container>Retailer</Container>
+}
 
-export default Header;
+export default Header

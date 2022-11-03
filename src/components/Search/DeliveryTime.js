@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { AppContext } from 'App'
 
 const Label = styled.label`
   margin-right: 10px;
@@ -10,15 +11,14 @@ const StyledInput = styled.input`
   padding: 5px;
 `
 
-const DeliveryTime = ({ changeDeliveryTime }) => {
+const DeliveryTime = () => {
+  const context = useContext(AppContext)
   return (
     <div>
-      <Label for="delivery">Delivery time: </Label>
+      <Label>Delivery time: </Label>
       <StyledInput
         type="month"
-        id="bdaymonth"
-        name="bdaymonth"
-        onChange={changeDeliveryTime}
+        onChange={context.changeDeliveryTime}
       ></StyledInput>
     </div>
   )

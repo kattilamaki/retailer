@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { AppContext } from 'App'
 
 const Container = styled.div`
   display: flex;
@@ -21,16 +22,17 @@ const Euro = styled.div`
   margin-left: 10px;
 `
 
-const SalesAmount = ({ changeAmount }) => {
+const SalesAmount = () => {
+  const context = useContext(AppContext)
   return (
     <Container>
       <div>
-        <Label for="sales">Sales amount: </Label>
+        <Label>Sales amount: </Label>
         <StyledInput
           type="number"
           id="sales"
           name="sales"
-          onChange={changeAmount}
+          onChange={context.changeAmount}
         ></StyledInput>
       </div>
       <Euro>€</Euro>

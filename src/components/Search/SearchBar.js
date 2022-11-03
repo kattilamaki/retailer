@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Customer from "components/Search/Customer";
-import DeliveryTime from "components/Search/DeliveryTime";
-import SalesAmount from "components/Search/SalesAmount";
+import React from 'react'
+import styled from 'styled-components'
+import Customer from 'components/Search/Customer'
+import DeliveryTime from 'components/Search/DeliveryTime'
+import SalesAmount from 'components/Search/SalesAmount'
 
 const Container = styled.div`
   display: flex;
@@ -13,21 +13,16 @@ const Container = styled.div`
   height: 80px;
   align-items: center;
   border-radius: 7px;
-`;
+`
 
-const SearchBar = ({
-  customers,
-  changeAmount,
-  changeCustomer,
-  changeDeliveryTime,
-}) => {
+const SearchBar = () => {
   return (
     <Container>
-      <Customer customers={customers} changeCustomer={changeCustomer} />
-      <DeliveryTime changeDeliveryTime={changeDeliveryTime} />
-      <SalesAmount changeAmount={changeAmount} />
+      <Customer />
+      <DeliveryTime />
+      <SalesAmount />
     </Container>
-  );
-};
+  )
+}
 
-export default SearchBar;
+export default SearchBar

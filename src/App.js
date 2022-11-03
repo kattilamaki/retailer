@@ -1,7 +1,7 @@
 import React, { useState, createContext, useEffect } from 'react'
 import Header from 'components/Header/Header'
 import SearchBar from 'components/Search/SearchBar'
-import Results from 'components/Products/Products'
+import Products from 'components/Products/Products'
 import 'App.css'
 import styled from 'styled-components'
 import useJsonData from 'adapters/useAppData'
@@ -42,17 +42,15 @@ const App = () => {
               appData: appData,
               amount: amount,
               customerId: customerId,
-              deliveryTime: deliveryTime
+              deliveryTime: deliveryTime,
+              changeCustomer: handleCustomerChange,
+              changeAmount: handleAmountChange,
+              changeDeliveryTime: handleDeliveryTimeChange
             }}
           >
             <Header />
-            <SearchBar
-              customers={appData.customers}
-              changeAmount={handleAmountChange}
-              changeCustomer={handleCustomerChange}
-              changeDeliveryTime={handleDeliveryTimeChange}
-            />
-            <Results />
+            <SearchBar />
+            <Products />
           </AppContext.Provider>
         </Page>
       )}
